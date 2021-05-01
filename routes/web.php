@@ -13,33 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/add-product', function () {
-//     return view('Admin/Product/add_product');
-// });
 
-// Route::get('/view-product', function () {
-//     return view('Admin/Product/view_product');
-// });
 
-// Route::get('/add-category', function () {
-//     return view('Admin/Category/view_category');
-// });
-
-// Route::get('/view-category', function () {
-//     return view('Admin/Category/view_category');
-// });
-
-// Route::get('index',"HomeController@index");
-// Route::get('index/{id}',"HomeController@by_category_index");
 // Values Store Through API
 Route::get('api',"ApiController@api");
 
-// Route::get('all-products',"HomeController@index");
-// Route::get('view-product-detail/{id}',"HomeController@productDetail");
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/index', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 			
 
@@ -71,8 +53,9 @@ Route::post('update-buyer/{id}',"Admin\BuyerController@update");
 Route::get('delete-buyer/{id}',"Admin\BuyerController@destroy");
 // Order
 Route::get('view-orders',"Admin\OrderController@index");
-
-
+// Contact
+Route::get('view-contacts',"Admin\MessageController@index");
+Route::get('delete-contact/{id}',"Admin\MessageController@destroy");
 
 				// App
 

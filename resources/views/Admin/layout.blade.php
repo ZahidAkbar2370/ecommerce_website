@@ -93,14 +93,13 @@
 
 						<li><a href="{{URl::to('/view-orders')}}"><i class="icon-list-alt"></i><span class="hidden-tablet">View Orders</span></a></li>
 
+						<li><a href="{{URl::to('/view-contacts')}}"><i class="icon-list-alt"></i><span class="hidden-tablet">View Messages</span></a></li>
 
-						
-						
 					</ul>
 				</div>
 			</div>
 			<!-- end: Main Menu -->
-			
+			<br><br>
 			
 			<noscript>
 				<div class="alert alert-block span10">

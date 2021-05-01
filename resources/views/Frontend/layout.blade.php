@@ -165,9 +165,9 @@
                         <div class="single-widget">
                             <h2>QUICK LINK</h2>
                             <ul class="nav nav-pills nav-stacked">
-                                <li><a href="#">Home</a></li>
+                                <li><a href="{{url('index')}}">Home</a></li>
                                 <li><a href="#">About</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="{{url('contact')}}">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -195,7 +195,7 @@
             <div class="container">
                 <div class="row">
                     <p class="pull-left">Copyright © 2021 E-SHOPPER Inc. All rights reserved.</p>
-                    <p class="pull-right">Developed by <span><a target="_blank" href="#">Zahid Akbar Jakhar</a></span></p>
+                    <p class="pull-right">Developed by <span><a target="_blank" href="https://github.com/ZahidAkbar2370">Zahid Akbar Jakhar</a></span></p>
                 </div>
             </div>
         </div>
