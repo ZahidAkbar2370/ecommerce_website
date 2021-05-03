@@ -85,7 +85,7 @@
                                                             <img src="{{$product->image}}" width="250px" height="150px" alt="" />
                                                             <h4 style="color: #FE980F">${{$product->price}}</h4>
                                                             <p style="height:43px;overflow: hidden">{{$product->product_name}}</p>
-                                                            <a href="product-detail/{{$product->id}}"><button class="btn btn-primary" style="margin-bottom: 10px">Add Card</button></a>
+                                                            <a href="product-detail/{{$product->id}}"><button class="btn btn-primary" style="margin-bottom: 10px">Add Cart</button></a>
                                                         </div>
                                                         
                                                     </div>

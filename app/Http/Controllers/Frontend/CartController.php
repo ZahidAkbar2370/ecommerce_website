@@ -31,11 +31,11 @@ class CartController extends Controller
           'user_id' => Auth::user()->id,
           'product_id' => $request->prodcut_id,
           'product_quantity' => $request->product_quantity,
-          'added_date' => Date("Y m d"),
+          'order_id' => "0",
           'status' => "pending",
         ]);
 
-        return redirect('cart');
+        return redirect('view-cart');
       }
       else
       {
@@ -67,21 +67,24 @@ class CartController extends Controller
     }
     public function save_heckout(Request $request)
     {
-        // $order = Order::create([
+      if($request->total_price != "0" && $request->total_items != "0")
+      {
+        $order = Order::create([
 
-        //     'cart_id' => $request->product_id,
-        //     'user_id' => Auth::User()->id,
-        //     'quantity' => $request->quantity,
-        //     'total_price' => $request->total_price,
-        //     'status' => "pending",
-        // ]);
+            'user_id' => Auth::User()->id,
+            'total_price' => $request->total_price,
+            'total_items' => $request->total_items,
+        ]);
 
-        // $order = Cart::where("user_id",Auth::User()->id)->update([
+        // dd($order);
+        $updateCart = Cart::where("user_id",Auth::User()->id)->where("status","pending")->update([
               
-        //       'status' => "ordered",
-        // ]);
+              'status' => "ordered",
+              'order_id' => $order->id,
+        ]);
+      }
+        return redirect('checkout');  
 
-        return redirect('checkout');        
     }
     	
 	}
